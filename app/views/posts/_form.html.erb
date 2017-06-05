@@ -1,0 +1,10 @@
+<%= flash[:alert] %>
+<%= form_for(@post) do |f| %>
+    제목:
+    <%= f.text_field :title, class: "form-control", placeholder: "제목을 입력해주세요" %><br>
+    내용:
+    <%= f.text_area :content, class: "form-control",placeholder: "내용을 입력해주세요" %><br>
+    
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "작성하기", class: "btn btn-success"%>
+<% end %>

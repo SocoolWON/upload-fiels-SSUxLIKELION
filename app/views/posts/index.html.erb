@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h1>글을 작성하고 파일을 올려봅시다.</h1>
+  <%= link_to "글쓰기", new_post_path, class: "btn btn-primary btn-lg" %>
+</div>
+
+<div class="list-group">
+  <% @posts.each do |post| %>
+      <%= link_to post.title, post_path(post), class: "list-group-item"%>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h1>포스트 상세보기</h1>
+  <%= flash[:alert] %>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">제목: <%=@post.title%></h3>
+  </div>
+  <div class="panel-body">
+    내용: <%=@post.content%>
+  </div>
+  <% if current_user.id == @post.user_id %>
+      <%= link_to '수정', edit_post_path(@post), class: "btn btn-default btn-sm"%>
+      <%= link_to '삭제', post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default btn-sm"%>
+  <% end %>
+</div>
