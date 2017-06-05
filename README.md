@@ -1,6 +1,6 @@
-다음을 터미널창에 입력해주세요.
+다음을 터미널창에 순서대로 입력해주세요.
 
-rake db:migrate
+rake db:migrate <br>
 rake db:seed
 
 
