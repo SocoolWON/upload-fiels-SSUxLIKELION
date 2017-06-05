@@ -1,5 +1,6 @@
 다음을 터미널창에 순서대로 입력해주세요.
 
+bundle install<br>
 rake db:migrate <br>
 rake db:seed
 
